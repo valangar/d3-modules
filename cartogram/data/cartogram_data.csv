@@ -1,0 +1,55 @@
+﻿region_name,region_id,region_type,region_value,region_rank
+Alabama,AL,state,458467.38,3
+Alaska,AK,state,129298.39,43
+Arizona,AZ,state,221224.8,28
+Arkansas,AR,state,46262.78,49
+California,CA,state,198577.5,30
+Colorado,CO,state,1407.84,54
+Connecticut,CT,state,140751,41
+Delaware,DE,state,238605.98,25
+District of Columbia,DC,state,338438.8,13
+Florida,FL,state,308336.47,19
+Georgia,GA,state,52715,48
+Hawaii,HI,state,145097.43,40
+Idaho,ID,state,92546.27,46
+Illinois,IL,state,187896.73,33
+Indiana,IN,state,221002.83,29
+Iowa,IA,state,60688.81,47
+Kansas,KS,state,331735.52,15
+Kentucky,KY,state,177899.06,36
+Louisiana,LA,state,282105.13,22
+Maine,ME,state,445178.86,5
+Montana,MT,state,334412.49,14
+Nebraska,NE,state,467131.54,2
+Nevada,NV,state,2019.81,53
+New Hampshire,NH,state,307751.73,20
+New Jersey,NJ,state,320768.53,16
+New Mexico,NM,state,187587.3,34
+New York,NY,state,234412.25,27
+North Carolina,NC,state,173920.8,38
+North Dakota,ND,state,34625.53,50
+Ohio,OH,state,407461.45,10
+Oklahoma,OK,state,444676.62,6
+Oregon,OR,state,177076.28,37
+Maryland,MD,state,432140.98,7
+Massachusetts,MA,state,297796.83,21
+Michigan,MI,state,98045.11,45
+Minnesota,MN,state,312868.68,17
+Mississippi,MS,state,145314.8,39
+Missouri,MO,state,23405.82,52
+Pennsylvania,PA,state,312847.25,18
+Rhode Island,RI,state,190654.55,32
+South Carolina,SC,state,418431.94,8
+South Dakota,SD,state,193941.98,31
+Tennessee,TN,state,410135.08,9
+Texas,TX,state,490219.33,1
+Utah,UT,state,237627.55,26
+Vermont,VT,state,271955,23
+Virginia,VA,state,390574.49,12
+Washington,WA,state,29529.11,51
+West Virginia,WV,state,446186.92,4
+Wisconsin,WI,state,407364.24,11
+Wyoming,WY,state,264919.95,24
+Puerto Rico,PR,state,185590.11,35
+Guam,GU,state,113041.74,44
+Virgin Islands,VI,state,140673.35,42
