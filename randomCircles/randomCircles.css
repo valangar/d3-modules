@@ -1,0 +1,6 @@
+:root {
+    --main-orange: orange;
+}
+circle {
+    fill: var(--main-orange);
+}
