@@ -17,13 +17,13 @@ let chiplistModule = function module(){
 									.attr("height", height)	
 									.attr("id", function(d, i){
 										if(d.chip_id) return d.chip_id;
-										return "chip_" + i;
+										return "chip-" + i;
 									})
 									.attr("class", "chips");
 			chips.append("div")
 					.attr("id",  function(d, i){
-						if(d.chip_id) return "dp_" + d.chip_id;
-						return "dp_" + i;
+						if(d.chip_id) return "dp-" + d.chip_id;
+						return "dp-" + i;
 					})
 					.attr("class", "chips-dp")
 					.html(function(d){
@@ -31,16 +31,16 @@ let chiplistModule = function module(){
 						else if(d.display_type === "image") return "<img class = 'chips-dp-content' src = '" + d.display_content + "'/>";
 						return "";
 					})
-				/*  .append("div")
+			chips.append("div")
 					.attr("id", function(d, i){
-						if(d.chip_id) return "info_" + d.chip_id;
-						return "info_" + i;
+						if(d.chip_id) return "info-" + d.chip_id;
+						return "info-" + i;
 					})
-					.attr("class", "chips_info")
+					.attr("class", "chips-info")
 					.text(function(d){
 						if(d.info !== undefined) return d.info;
 						return "";
-					}); */
+					}); 
 					
         });
     }

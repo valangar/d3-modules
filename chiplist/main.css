@@ -1,0 +1,16 @@
+@import "./chiplist.css";
+
+#chiplist-container, #credits {
+	width:600px;
+}
+#chiplist-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+#credits {
+	font-size: x-small;
+	margin-top: 20px;
+}
+.chips-info {
+	font-size: 12px;
+}

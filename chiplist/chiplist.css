@@ -1,14 +1,18 @@
 .chips {
-	border: 0.5px solid silver;
+	width: 150px;
+	height: 50px;
+	margin: 5px;
 	padding: 10px;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+	border: 0.5px solid silver;
 }
 .chips-dp, .chips-dp-content {
 	width: 50px;
 	height: 50px;
-	border: 0.5px solid silver;
+}
+.chips-dp, .chips-info {
 	margin: 5px;
 }
 .chips-dp-content {
