@@ -1,0 +1,6 @@
+@import "./forceDirGraph.css";
+
+#graph-container {
+	width: 500px;
+	height: 500px;
+}
