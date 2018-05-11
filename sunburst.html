@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+<body>
+    <svg style="opacity: 0.2"></svg>
+</body>
+
+<script>
+    // JSON data
+    var nodeData = {
+   "name": "SKILLS", "children": [
+      {
+         "name": "Programming Languages",
+         "children": [
+                        { "name": "JavaScript", "children": [
+                                                               {"name": "Libraries" , "children": [{"name": "Jquery.js", "size": 4}, {"name": "D3.js", "size": 5}]},
+                                                               {"name": "Vue.js" , "size": 5},
+                                                            ] 
+                        }, 
+                        { "name": "HTML5", "size": 5 },
+                        { "name": "CSS", "size": 5 },
+                        { "name": "Python", "size": 4 },
+                        { "name": "C++", "children": [{"name": "OpenGL", size: 5}] },
+                     ]
+      }, 
+      {
+         "name": "GIT Version Control",
+         "size": 5
+      }, 
+      {
+         "name": "JIRA Task Tracking",
+         "size": 5
+      },
+      {
+         "name": "Prototyping",
+         "children": [
+                        { "name": "Photoshop", "size": 5 }, 
+                        { "name": "Microsoft Visio", "size": 4 },
+                        { "name": "Moqups", "size": 4 }
+                     ]
+      },
+      {
+         "name": "PostgreSQL Database Management",
+         "size": 4
+      },
+      {
+         "name": "More",
+         "children": [
+                        { "name": "Confluence Documentation", "size": 4 }, 
+                        { "name": "Text Editing/IDE", "children": [{"name": "Sublime", "size": 4}, {"name": "Microsoft Visual Studio Code", "size": 4}] }
+                     ]
+      },
+   ]
+};
+
+    // Variables
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    var radius = Math.min(width, height) / 2;
+    var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+    // Create primary <g> element
+    var g = d3.select('svg')
+        .attr('width', width)
+        .attr('height', height)
+        .append('g')
+        .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')');
+
+    // Data strucure
+    var partition = d3.partition()
+        .size([2 * Math.PI, radius]);
+
+    // Find data root
+    var root = d3.hierarchy(nodeData)
+        .sum(function (d) { return d.size});
+
+    // Size arcs
+    partition(root);
+    var arc = d3.arc()
+        .startAngle(function (d) { return d.x0 })
+        .endAngle(function (d) { return d.x1 })
+        .innerRadius(function (d) { return d.y0 })
+        .outerRadius(function (d) { return d.y1 });
+
+    // Put it all together
+    g.selectAll('path')
+        .data(root.descendants())
+        .enter().append('path')
+        .attr("display", function (d) { return d.depth ? null : "none"; })
+        .attr("d", arc)
+        .style('stroke', '#fff')
+        .style("fill", function (d) { return color((d.children ? d : d.parent).data.name); });
+</script>
